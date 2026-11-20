@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.ypconfig17.security.starter.oauth2.ExtendOAuthClientAutoConfiguration,\
+io.github.ypconfig17.security.starter.security.SecurityEnhanceConfig

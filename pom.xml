@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.github.ypconfig17</groupId>
+    <artifactId>spring-security-extensions</artifactId>
+    <packaging>pom</packaging>
+    <version>5.7.3</version>
+    <modules>
+        <module>security-extend-core</module>
+        <module>security-extend-web</module>
+        <module>security-extend-oauth2-client</module>
+        <module>security-extend-example</module>
+        <module>security-extend-common</module>
+        <module>security-extend-config</module>
+        <module>security-extend-starter</module>
+    </modules>
+
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
+        <spring-boot.version>2.7.4</spring-boot.version>
+        <security-extend.version>5.7.3</security-extend.version>
+        <lombok.version>1.18.12</lombok.version>
+        <google-guava.version>24.1.1-jre</google-guava.version>
+        <jackson.version>2.10.2</jackson.version>
+        <commons-lang3.version>3.5</commons-lang3.version>
+        <commons-collections4.version>4.4</commons-collections4.version>
+    </properties>
+
+
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.ypconfig17</groupId>
+                <artifactId>security-extend-core</artifactId>
+                <version>${security-extend.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.ypconfig17</groupId>
+                <artifactId>security-extend-common</artifactId>
+                <version>${security-extend.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.ypconfig17</groupId>
+                <artifactId>security-extend-oauth2-client</artifactId>
+                <version>${security-extend.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.ypconfig17</groupId>
+                <artifactId>security-extend-web</artifactId>
+                <version>${security-extend.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.ypconfig17</groupId>
+                <artifactId>security-extend-config</artifactId>
+                <version>${security-extend.version}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-collections4</artifactId>
+                <version>${commons-collections4.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+        </dependencies>
+
+
+    </dependencyManagement>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
