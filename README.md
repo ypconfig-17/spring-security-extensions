@@ -33,3 +33,7 @@ mvn clean verify
 - `DEMO_DATASOURCE_PASSWORD`
 
 项目使用 `io.github.ypconfig17` 作为自身 Java 包命名空间和 Maven groupId。部分 Spring Security 集成类位于框架包下，用来接入当前版本的配置机制。升级框架版本时需重新验证这些接入点。
+
+## 许可证
+
+[Apache-2.0](LICENSE)。第三方文件保留各自的版权和许可声明。
